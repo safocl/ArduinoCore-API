@@ -28,7 +28,7 @@ IPAddress::IPAddress() = default;
 
 IPAddress::IPAddress(IPType ip_type) : _type(ip_type) {}
 
-IPAddress::IPAddress(uint8_t first_octet, uint8_t second_octet, uint8_t third_octet, uint8_t fourth_octet)
+IPAddress::IPAddress(uint8_t first_octet, uint8_t second_octet, uint8_t third_octet, uint8_t fourth_octet) : _type(IPv4)
 {
     _address[IPADDRESS_V4_BYTES_INDEX] = first_octet;
     _address[IPADDRESS_V4_BYTES_INDEX + 1] = second_octet;
