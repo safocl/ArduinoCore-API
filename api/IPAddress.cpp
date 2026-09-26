@@ -39,7 +39,7 @@ IPAddress::IPAddress(uint8_t first_octet, uint8_t second_octet, uint8_t third_oc
 IPAddress::IPAddress(uint8_t o1, uint8_t o2, uint8_t o3, uint8_t o4, uint8_t o5, uint8_t o6, uint8_t o7, uint8_t o8, uint8_t o9, uint8_t o10, uint8_t o11, uint8_t o12, uint8_t o13, uint8_t o14, uint8_t o15, uint8_t o16) : _address{o1, o2, o3, o4, o5, o6, o7, o8, o9, o10, o11, o12, o13, o14, o15, o16}, _type(IPv6) {}
 
 // IPv4 only
-IPAddress::IPAddress(uint32_t address) 
+IPAddress::IPAddress(uint32_t address) : _type(IPv4)
 {
     // memcpy(raw_address(), &address, 4); // This method guarantees a defined behavior. 
                                            // But lifetime started when:
